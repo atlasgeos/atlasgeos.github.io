@@ -309,10 +309,9 @@
       // date filter (simple from–to)
       const dateGroup = document.createElement('div');
       dateGroup.style.display='flex';dateGroup.style.alignItems='center';dateGroup.style.gap='8px';
-      dateGroup.innerHTML = '<strong style="margin-right:8px">Updated :</strong>';
+      //dateGroup.innerHTML = '<strong style="margin-right:8px">Updated :</strong>';
       const from = document.createElement('input'); from.type='date'; from.id='dateFrom';
       const to = document.createElement('input'); to.type='date'; to.id='dateTo';
-      <br>
       const btn = document.createElement('button'); btn.textContent='Apply'; btn.className='filter-chip';
       btn.onclick = applyFilters;
       dateGroup.appendChild(from); dateGroup.appendChild(to); dateGroup.appendChild(btn);
