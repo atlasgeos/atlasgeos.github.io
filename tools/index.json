@@ -12,20 +12,25 @@
 "download":"https://drive.google.com/yourfile"
 },
 {
-"id":'TOOL-002', 
-"title":'Attribute Harmonizer', 
-"description":'Harmonize attribute fields across layers for analysis and publishing.',
-"categories":['ArcGIS Pro','Extension'], 
-"products":['ArcGIS Pro'], 
-"updated":'2025-10-01T09:00:00Z', 
-"thumbnail":'https://via.placeholder.com/320x180?text=Attribute+Harmonizer', 
-"page":'tools/example1.html', 
-"youtube":'', 
-"download":''
+"id":"TOOL-002", 
+"title":"Attribute Harmonizer", 
+"description":"Harmonize attribute fields across layers for analysis and publishing.",
+"categories":["ArcGIS Pro","Extension"], 
+"products":["ArcGIS Pro"], 
+"updated":"2025-10-01T09:00:00Z", 
+"thumbnail":"https://via.placeholder.com/320x180?text=Attribute+Harmonizer", 
+"page":"tools/example1.html", 
+"youtube":"", 
+"download":""
 },
 {
-"id":'TOOL-003', "title":'Online Publisher', "description":'Automates publishing data and services to ArcGIS Online and Enterprise.',
-"categories":['ArcGIS Online'], "products":['ArcGIS Online'], "updated":'2025-09-21T09:00:00Z', 
-"thumbnail":'https://via.placeholder.com/320x180?text=Online+Publisher', "page":'tools/example2.html', "youtube":'', "download":''
+"id":"TOOL-003", 
+"title":"Online Publisher", 
+"description":"Automates publishing data and services to ArcGIS Online and Enterprise.",
+"categories":["ArcGIS Online"], 
+"products":["ArcGIS Online"], 
+"updated":"2025-09-21T09:00:00Z", 
+"thumbnail":"https://via.placeholder.com/320x180?text=Online+Publisher", 
+"page":"tools/example2.html", "youtube":"", "download":""
 }
 ]
