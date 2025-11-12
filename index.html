@@ -152,7 +152,7 @@
         <p class="muted">Click "Send email" to contact us. Please explain your requirement to create gis tool and provide some sample data input/output and some picture of you want, your country, and your contact email so we can reply with payment instructions (donation-based).</p>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <input id="contactProductId" placeholder="Product ID (e.g. TOOL-001)" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
+        <input id="requirement" placeholder="Requirement" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
         <input id="contactCountry" placeholder="Country" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
         <input id="contactEmail" placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
         <button id="sendMail" class="btn">Send email</button>
@@ -443,7 +443,7 @@
         const email = document.getElementById('contactEmail').value || '';
         const to = 'atlasgeosci@gmail.com';
         const subject = encodeURIComponent('Purchase inquiry: ' + id + ' ' + requirement);
-        const body = encodeURIComponent(`I am interested in product: ${id}\nCountry: ${country}\nContact email: ${email}\n\nPlease advise how to proceed with payment (donation).`);
+        const body = encodeURIComponent(`I am interested in product: ${id} ${requirement}\nCountry: ${country}\nContact email: ${email}\n\nPlease advise how to proceed with payment (donation).`);
         window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
       });
     }
