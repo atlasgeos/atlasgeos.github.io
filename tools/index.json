@@ -6,7 +6,7 @@
 "categories":["ArcGIS Pro","Extension"],
 "products":["ArcGIS Pro"],
 "updated":"2025-09-12T10:00:00Z",
-"thumbnail":"tools/thumbs/tool1.jpg",
+"thumbnail":"tools/thumbs/tool1.jpg?text=Buffer+Assistant",
 "page":"tools/tool1.html",
 "youtube":"https://youtube.com/watch?v=...",
 "download":"https://drive.google.com/yourfile"
@@ -18,7 +18,7 @@
 "categories":["ArcGIS Pro","Extension"], 
 "products":["ArcGIS Pro"], 
 "updated":"2025-10-01T09:00:00Z", 
-"thumbnail":"https://via.placeholder.com/320x180?text=Attribute+Harmonizer", 
+"thumbnail":"tools/thumbs/tool1.jpg?text=Attribute+Harmonizer", 
 "page":"tools/example1.html", 
 "youtube":"", 
 "download":""
@@ -30,7 +30,7 @@
 "categories":["ArcGIS Online"], 
 "products":["ArcGIS Online"], 
 "updated":"2025-09-21T09:00:00Z", 
-"thumbnail":"https://via.placeholder.com/320x180?text=Online+Publisher", 
+"thumbnail":"tools/thumbs/tool1.jpg?text=Online+Publisher", 
 "page":"tools/example2.html", "youtube":"", "download":""
 }
 ]
