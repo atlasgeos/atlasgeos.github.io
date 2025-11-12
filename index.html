@@ -248,6 +248,7 @@
             <p class="muted">${escapeHtml(item.description || '')}</p>
             <div style="margin-top:8px;font-size:0.85rem">
               <a class="small-link" href="${item.page||'#'}" target="_blank">Open tool page</a>
+              <button onclick="window.open('${item.youtube}', '_blank')">🎬 View on YouTube</button>
               ${item.youtube?` • <a class="small-link" href="${item.youtube}" target="_blank">YouTube</a>`:''}
             </div>
           </div>
