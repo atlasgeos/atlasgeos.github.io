@@ -1,1 +1,0 @@
-# atlasgeos.github.io
