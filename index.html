@@ -1,1 +1,448 @@
-Hello
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ArcGIS Tools Catalog — Data Analysis & Management Tools</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="A catalog of data analysis and management tools for ArcGIS Pro, ArcGIS Online, and ArcGIS Enterprise. Browse, search and filter tools; view demos, download examples, and contact the author.">
+  <meta name="keywords" content="ArcGIS Pro, ArcGIS Online, ArcGIS Enterprise, ArcGIS tools, GIS tools, data analysis, spatial analysis, extension, plugin">
+  <meta name="author" content="atlasgeos.github.io">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ArcGIS Tools Catalog">
+  <meta property="og:description" content="Data analysis & management tools for ArcGIS Pro, ArcGIS Online, and ArcGIS Enterprise.">
+  <meta property="og:type" content="website">
+
+  <!-- Simple blue, trustworthy palette; mobile-first responsive -->
+  <style>
+    
+    :root{
+      --blue-900:#0b3d91;
+      --blue-700:#1659b6;
+      --blue-500:#2a82d6;
+      --blue-300:#a6d0ff;
+      --muted:#6b7785;
+      --card-bg:#ffffff;
+      --page-bg: #bedafa; /* #1659b6; /*#f5f8fb;*/
+      --max-width:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+
+    html,body{height:100%;margin:0;background:var(--page-bg);color:#0f1724}
+    /*.container{max-width:var(--max-width);margin:24px auto;padding:0 16px}*/
+    .container{max-width:var(--max-width);margin:24px auto;padding:0 16px; border-radius: 10px;}
+    header{display:flex;align-items:center;gap:16px; border-radius: 10px;}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--blue-700),var(--blue-500));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:1.25rem;margin:0}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
+
+    /* Carousel */
+    .carousel{margin-top:18px;background:linear-gradient(180deg,white, #f8fbff);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(10,36,99,0.06)}
+    .carousel-track{display:flex;gap:12px;overflow:hidden}
+    .carousel-card{min-width:260px;flex:0 0 auto;background:var(--card-bg);border-radius:8px;padding:12px;box-shadow:0 4px 10px rgba(12,40,92,0.06);display:flex;gap:12px;align-items:center}
+    .thumb{width:84px;height:64px;border-radius:6px;background:#e6f0ff;object-fit:cover}
+    .meta{flex:1}
+    .meta h3{margin:0;font-size:1rem}
+    .meta p{margin:6px 0 0;color:var(--muted);font-size:0.9rem}
+    .carousel-controls{display:flex;gap:8px;align-items:center;margin-top:8px}
+    .btn{background:var(--blue-700);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--blue-700);border:1px solid var(--blue-300)}
+
+    /* Search & Filters */
+    .searchbar{display:flex;gap:12px;margin-top:18px;align-items:center}
+    .searchbar input[type=text]{flex:1;padding:10px 12px;border-radius:10px;border:1px solid #d6e6ff;background:white}
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .filter-chip{padding:6px 10px;border-radius:999px;border:1px solid #dbeefe;background:white;font-size:0.9rem;cursor:pointer}
+    .filter-chip.active{background:var(--blue-500);color:white;border-color:var(--blue-500)}
+
+    /* Cards */
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+    .card{display:flex;gap:12px;background:var(--card-bg);padding:12px;border-radius:10px;align-items:center;box-shadow:0 6px 14px rgba(12,40,92,0.04)}
+    .card .left{width:160px;flex-shrink:0}
+    .card img{width:100%;height:90px;object-fit:cover;border-radius:8px}
+    .card .content{flex:1;display:flex;flex-direction:column;gap:6px}
+    .card small{color:var(--muted)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:#eef6ff;padding:6px 8px;border-radius:6px;font-size:0.75rem;color:var(--blue-700)}
+
+    /* footer contact */
+    footer{margin-top:28px;padding:18px;background:linear-gradient(180deg,#eef7ff,transparent);border-radius:10px;display:flex;flex-direction:column;gap:8px}
+
+    /* responsive */
+    @media(min-width:900px){
+      .grid{grid-template-columns:1fr}
+      .carousel-card{min-width:320px}
+      header h1{font-size:1.5rem}
+    }
+
+    @media(min-width:1100px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* helper */
+    .muted{color:var(--muted)}
+    a.small-link{font-size:0.9rem;color:var(--blue-700);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header  style="background: #034694; color: white; padding: 1rem; ">
+    <!--header-->
+      <div class="brand">
+        <div class="logo">AG</div>
+        <div>
+          <h1>Tools Catalog</h1>
+          <p>Tools for ArcGIS Pro, ArcGIS Online &amp; ArcGIS Enterprise — analyze, manage, and automate spatial data</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Carousel: shows latest 5 -->
+    <section class="carousel" aria-label="Latest tools">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Latest tools</strong>
+        <div class="carousel-controls">
+          <button id="prevCar" class="btn secondary">◀</button>
+          <button id="nextCar" class="btn">▶</button>
+        </div>
+      </div>
+      <div id="carouselTrack" class="carousel-track" style="margin-top:12px"></div>
+    </section>
+
+    <!-- Search & filters -->
+    <div class="searchbar">
+      <input id="searchInput" type="text" placeholder="Search tools, descriptions, or inside tool pages...">
+      <select id="sortSelect" title="Sort">
+        <option value="updated_desc">Sort: Latest updated</option>
+        <option value="updated_asc">Sort: Oldest updated</option>
+        <option value="title_asc">Sort: Title A–Z</option>
+        <option value="title_desc">Sort: Title Z–A</option>
+      </select>
+      <button id="clearBtn" class="btn secondary">Clear</button>
+    </div>
+
+    <div class="filters" id="filters"></div>
+
+    <!-- Tool cards -->
+    <main>
+      <div id="resultsCount" style="margin-top:10px;color:var(--muted)"></div>
+      <div id="grid" class="grid" aria-live="polite"></div>
+    </main>
+
+    <!-- Footer contact -->
+    <footer>
+      <div>
+        <strong>Contact & Purchase Inquiries</strong>
+        <p class="muted">Click "Send email" to contact us. Please include the product ID code, your country, and your contact email so we can reply with payment instructions (donation-based).</p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <input id="contactProductId" placeholder="Product ID (e.g. TOOL-001)" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
+        <input id="contactCountry" placeholder="Country" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
+        <input id="contactEmail" placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
+        <button id="sendMail" class="btn">Send email</button>
+      </div>
+    </footer>
+
+    <p style="text-align:center;margin-top:12px;color:var(--muted);font-size:0.85rem">Built for GitHub Pages — place your tool pages in <code>/tools/</code> and an optional <code>/tools/index.json</code> manifest.</p>
+  </div>
+
+  <script>
+    /*
+      ArcGIS Tools Catalog (single-file static site)
+      - Place tool pages (HTML snippets or full pages) in /tools/ on the same origin (GitHub Pages recommended).
+      - Optionally include /tools/index.json with an array of items like:
+        [
+          {
+            "id":"TOOL-001",
+            "title":"Buffer Assistant",
+            "description":"Creates distance buffers with options for dissolve and attributes.",
+            "categories":["ArcGIS Pro","Extension"],
+            "products":["ArcGIS Pro"],
+            "updated":"2025-09-12T10:00:00Z",
+            "thumbnail":"tools/thumbs/tool1.jpg",
+            "page":"tools/tool1.html",
+            "youtube":"https://youtube.com/watch?v=...",
+            "download":"https://drive.google.com/yourfile"
+          }
+        ]
+      - If index.json is missing, the script will fall back to a small built-in list (edit below).
+      - The script will try to fetch each tool's HTML to enable "search inside page" capability. That requires the pages to be accessible (same origin) on GitHub Pages.
+    */
+
+    const TOOLS_INDEX = 'tools/index.json';
+
+    // --- Fallback list (edit or replace by adding tools/index.json to your project) ---
+    /*const fallbackTools = [
+      {
+        id:'TOOL-EX-001', title:'Example: Attribute Harmonizer', description:'Harmonize attribute fields across layers for analysis and publishing.',
+        categories:['ArcGIS Pro','Extension'], products:['ArcGIS Pro'], updated:'2025-10-01T09:00:00Z', thumbnail:'https://via.placeholder.com/320x180?text=Attribute+Harmonizer', page:'tools/example1.html', youtube:'', download:''
+      },
+      {
+        id:'TOOL-EX-002', title:'Example: Online Publisher', description:'Automates publishing data and services to ArcGIS Online and Enterprise.',
+        categories:['ArcGIS Online'], products:['ArcGIS Online'], updated:'2025-09-21T09:00:00Z', thumbnail:'https://via.placeholder.com/320x180?text=Online+Publisher', page:'tools/example2.html', youtube:'', download:''
+      }
+    ];*/
+
+    // state
+    let tools = [];
+    let toolsContentCache = {}; // for inside-page search
+
+    // helper: fetch JSON manifest
+    async function loadManifest(){
+      try{
+        const r = await fetch(TOOLS_INDEX, {cache:'no-store'});
+        if(!r.ok) throw new Error('no manifest');
+        const data = await r.json();
+        console.log('Loaded tools/index.json', data);
+        return data;
+      }catch(e){
+        console.warn('Could not load tools/index.json, using fallback list. You may create /tools/index.json to enable automatic listing. Error:', e.message);
+        return fallbackTools;
+      }
+    }
+
+    // helper: try to fetch each tool page to cache its text (for search inside)
+    async function cacheToolPages(list){
+      const promises = list.map(async t=>{
+        if(!t.page) return t;
+        try{
+          const r = await fetch(t.page, {cache:'no-store'});
+          if(r.ok){
+            const txt = await r.text();
+            const stripped = (new DOMParser()).parseFromString(txt,'text/html').body.innerText || '';
+            toolsContentCache[t.id] = stripped;
+          } else {
+            toolsContentCache[t.id] = '';
+          }
+        }catch(err){
+          toolsContentCache[t.id] = '';
+        }
+        return t;
+      });
+      await Promise.all(promises);
+    }
+
+    function formatDate(iso){
+      if(!iso) return '';
+      const d = new Date(iso);
+      if(isNaN(d)) return iso;
+      return d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});
+    }
+
+    // render carousel (latest 5 by updated)
+    function renderCarousel(list){
+      const track = document.getElementById('carouselTrack');
+      track.innerHTML = '';
+      const latest = list.slice().sort((a,b)=>new Date(b.updated)-new Date(a.updated)).slice(0,5);
+      latest.forEach(item=>{
+        const el = document.createElement('article');
+        el.className='carousel-card';
+        el.innerHTML = `
+          <img class="thumb" src="${item.thumbnail||'https://via.placeholder.com/320x180?text=No+image'}" alt="${escapeHtml(item.title)}">
+          <div class="meta">
+            <h3>${escapeHtml(item.title)}</h3>
+            <p class="muted">${escapeHtml(item.description || '')}</p>
+            <div style="margin-top:8px;font-size:0.85rem">
+              <a class="small-link" href="${item.page||'#'}" target="_blank">Open tool page</a>
+              ${item.youtube?` • <a class="small-link" href="${item.youtube}" target="_blank">YouTube</a>`:''}
+            </div>
+          </div>
+        `;
+        track.appendChild(el);
+      });
+    }
+
+    // render filters (products and categories based on items)
+    function renderFilters(list){
+      const container = document.getElementById('filters');
+      container.innerHTML='';
+      const productSet = new Set();
+      const categorySet = new Set();
+      list.forEach(i=>{(i.products||[]).forEach(p=>productSet.add(p));(i.categories||[]).forEach(c=>categorySet.add(c))});
+
+      // product chips
+      if(productSet.size){
+        const group = document.createElement('div');
+        group.style.display='flex';group.style.alignItems='center';group.style.gap='8px';
+        group.innerHTML = '<strong style="margin-right:8px">Filter by product:</strong>';
+        productSet.forEach(p=>{
+          const btn = document.createElement('button');
+          btn.className='filter-chip'; btn.textContent=p; btn.dataset.filterType='product'; btn.dataset.filterValue=p;
+          btn.onclick = ()=>{btn.classList.toggle('active'); applyFilters();};
+          group.appendChild(btn);
+        });
+        container.appendChild(group);
+      }
+
+      // category chips
+      if(categorySet.size){
+        const group = document.createElement('div');
+        group.style.display='flex';group.style.alignItems='center';group.style.gap='8px';
+        group.innerHTML = '<strong style="margin-right:8px">Filter by category:</strong>';
+        categorySet.forEach(c=>{
+          const btn = document.createElement('button');
+          btn.className='filter-chip'; btn.textContent=c; btn.dataset.filterType='category'; btn.dataset.filterValue=c;
+          btn.onclick = ()=>{btn.classList.toggle('active'); applyFilters();};
+          group.appendChild(btn);
+        });
+        container.appendChild(group);
+      }
+
+      // date filter (simple from–to)
+      const dateGroup = document.createElement('div');
+      dateGroup.style.display='flex';dateGroup.style.alignItems='center';dateGroup.style.gap='8px';
+      dateGroup.innerHTML = '<strong style="margin-right:8px">Updated between:</strong>';
+      const from = document.createElement('input'); from.type='date'; from.id='dateFrom';
+      const to = document.createElement('input'); to.type='date'; to.id='dateTo';
+      const btn = document.createElement('button'); btn.textContent='Apply'; btn.className='filter-chip';
+      btn.onclick = applyFilters;
+      dateGroup.appendChild(from); dateGroup.appendChild(to); dateGroup.appendChild(btn);
+      container.appendChild(dateGroup);
+    }
+
+    function getActiveFilters(){
+      const chips = Array.from(document.querySelectorAll('.filter-chip.active'));
+      const products = chips.filter(c=>c.dataset.filterType==='product').map(c=>c.dataset.filterValue);
+      const categories = chips.filter(c=>c.dataset.filterType==='category').map(c=>c.dataset.filterValue);
+      const from = document.getElementById('dateFrom')?.value || '';
+      const to = document.getElementById('dateTo')?.value || '';
+      return {products,categories,from,to};
+    }
+
+    function applyFilters(){
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const sort = document.getElementById('sortSelect').value;
+      const {products,categories,from,to} = getActiveFilters();
+
+      let results = tools.slice();
+
+      // filter by product and category
+      if(products.length) results = results.filter(t=> (t.products||[]).some(p=>products.includes(p)) );
+      if(categories.length) results = results.filter(t=> (t.categories||[]).some(c=>categories.includes(c)) );
+
+      // date filter
+      if(from){
+        const f = new Date(from);
+        results = results.filter(t=> new Date(t.updated) >= f);
+      }
+      if(to){
+        const f = new Date(to); f.setHours(23,59,59);
+        results = results.filter(t=> new Date(t.updated) <= f);
+      }
+
+      // search: in title, description, id, and inside cached page text
+      if(q){
+        results = results.filter(t=>{
+          const hay = ((t.title||'')+' '+(t.description||'')+' '+(t.id||'')).toLowerCase();
+          if(hay.includes(q)) return true;
+          const pageText = (toolsContentCache[t.id]||'').toLowerCase();
+          if(pageText.includes(q)) return true;
+          return false;
+        });
+      }
+
+      // sort
+      results.sort((a,b)=>{
+        if(sort==='updated_desc') return new Date(b.updated)-new Date(a.updated);
+        if(sort==='updated_asc') return new Date(a.updated)-new Date(b.updated);
+        if(sort==='title_asc') return (a.title||'').localeCompare(b.title||'');
+        if(sort==='title_desc') return (b.title||'').localeCompare(a.title||'');
+        return 0;
+      });
+
+      renderResults(results);
+    }
+
+    function renderResults(list){
+      const grid = document.getElementById('grid');
+      const count = document.getElementById('resultsCount');
+      grid.innerHTML = '';
+      count.textContent = `${list.length} items`;
+
+      list.forEach(item=>{
+        const c = document.createElement('article'); c.className='card';
+        c.innerHTML = `
+          <div class="left"><img src="${item.thumbnail||'https://via.placeholder.com/320x180?text=No+image'}" alt="${escapeHtml(item.title)}"></div>
+          <div class="content">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <div>
+                <div style="font-size:0.85rem;color:var(--muted)">${escapeHtml(item.id||'')}</div>
+                <h2 style="margin:4px 0 0;font-size:1.05rem">${escapeHtml(item.title||'Untitled')}</h2>
+              </div>
+              <div style="text-align:right">
+                <div style="font-size:0.85rem;color:var(--muted)">Updated: ${formatDate(item.updated)}</div>
+                <div style="margin-top:8px"><a class="small-link" href="${item.page||'#'}" target="_blank">Open</a> ${item.youtube?` • <a class="small-link" href="${item.youtube}" target="_blank">YouTube</a>`:''} ${item.download?` • <a class="small-link" href="${item.download}" target="_blank">Download</a>`:''}</div>
+              </div>
+            </div>
+            <p class="muted" style="margin:6px 0">${escapeHtml(item.description||'')}</p>
+            <div class="tags">
+              ${(item.categories||[]).map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}
+              ${(item.products||[]).map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}
+            </div>
+          </div>
+        `;
+        grid.appendChild(c);
+      });
+
+      // update carousel as well
+      renderCarousel(list);
+    }
+
+    // utilities
+    function escapeHtml(s){
+      return String(s||'').replace(/[&"'<>]/g,function(m){return {'&':'&amp;','"':'&quot;',"'":"&#39;","<":"&lt;",">":"&gt;"}[m]});
+    }
+
+    // init
+    async function init(){
+      const manifest = await loadManifest();
+      // normalize dates
+      manifest.forEach(m=>{ if(!m.updated) m.updated = '1970-01-01T00:00:00Z'; });
+      tools = manifest.slice();
+      // try caching page contents (best-effort)
+      await cacheToolPages(tools);
+      renderFilters(tools);
+      applyFilters();
+
+      // events
+      document.getElementById('searchInput').addEventListener('input', debounce(applyFilters,300));
+      document.getElementById('sortSelect').addEventListener('change', applyFilters);
+      document.getElementById('clearBtn').addEventListener('click', ()=>{
+        document.getElementById('searchInput').value='';
+        document.querySelectorAll('.filter-chip.active').forEach(e=>e.classList.remove('active'));
+        document.getElementById('dateFrom').value=''; document.getElementById('dateTo').value='';
+        applyFilters();
+      });
+
+      // carousel controls
+      const track = document.getElementById('carouselTrack');
+      document.getElementById('prevCar').addEventListener('click', ()=>{ track.scrollBy({left:-300,behavior:'smooth'}) });
+      document.getElementById('nextCar').addEventListener('click', ()=>{ track.scrollBy({left:300,behavior:'smooth'}) });
+
+      // send mail
+      document.getElementById('sendMail').addEventListener('click', ()=>{
+        const id = document.getElementById('contactProductId').value || '';
+        const country = document.getElementById('contactCountry').value || '';
+        const email = document.getElementById('contactEmail').value || '';
+        const to = 'youremail@example.com';
+        const subject = encodeURIComponent('Purchase inquiry: ' + id);
+        const body = encodeURIComponent(`I am interested in product: ${id}\nCountry: ${country}\nContact email: ${email}\n\nPlease advise how to proceed with payment (donation).`);
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      });
+    }
+
+    // debounce utility
+    function debounce(fn, t){let timer; return (...args)=>{ clearTimeout(timer); timer = setTimeout(()=>fn(...args), t);} }
+
+    // start
+    init();
+  </script>
+</body>
+</html>
+
+
+
