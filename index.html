@@ -147,7 +147,7 @@
         <input id="contactEmail" placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
         <button id="sendMail" class="btn">Send email</button>
       </div>
-      <div>
+      <!--div>
         <strong>Request tool and functions</strong>
         <p class="muted">Click "Send email" to contact us. Please explain your requirement to create gis tool and provide some sample data input/output and some picture of you want, your country, and your contact email so we can reply with payment instructions (donation-based).</p>
       </div>
@@ -156,7 +156,7 @@
         <input id="contactCountry" placeholder="Country" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
         <input id="contactEmail" placeholder="Your email" style="padding:8px;border-radius:8px;border:1px solid #d6e6ff">
         <button id="sendMail" class="btn">Send email</button>
-      </div>
+    </div-->
     </footer>
 
     <!--p style="text-align:center;margin-top:12px;color:var(--muted);font-size:0.85rem">Built for GitHub Pages — place your tool pages in <code>/tools/</code> and an optional <code>/tools/index.json</code> manifest.</p-->
@@ -438,7 +438,7 @@
       // send mail
       document.getElementById('sendMail').addEventListener('click', ()=>{
         const id = document.getElementById('contactProductId').value || '';
-        const requirement = document.getElementById('requirement').value || '';
+        //const requirement = document.getElementById('requirement').value || '';
         const country = document.getElementById('contactCountry').value || '';
         const email = document.getElementById('contactEmail').value || '';
         const to = 'atlasgeosci@gmail.com';
