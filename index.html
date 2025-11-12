@@ -34,26 +34,14 @@
     html,body{height:100%;margin:0;background:var(--page-bg);color:#0f1724}
     /*.container{max-width:var(--max-width);margin:24px auto;padding:0 16px}*/
     .container{max-width:var(--max-width);margin:24px auto;padding:0 16px; border-radius: 10px;}
+    .container-sm{max-width:var(--max-width);margin:10px auto;padding:0 56px}
     header{display:flex;align-items:center;gap:16px; border-radius: 10px;}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--blue-700),var(--blue-500));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
     h1{font-size:1.25rem;margin:0}
     p.lead{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
 
-    .container-flex {
-        display: flex;
-        /* Default is row direction, making children sit side-by-side */
-    }
-    
-    .column-left, .column-right {
-        /* Makes both columns grow equally to fill the container */
-        flex: 1; 
-        padding: 10px;
-        border: 1px solid #ccc;
-        /* Add margin for spacing if needed */
-        margin: 0 10px;
-    }
-    
+
     /* Carousel */
     .carousel{margin-top:18px;background:linear-gradient(180deg,white, #f8fbff);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(10,36,99,0.06)}
     .carousel-track{display:flex;gap:12px;overflow:hidden}
@@ -455,20 +443,9 @@
     // start
     init();
   </script>
-  <div class="container-flex">
-    <div class="column-left">
-        <!-- Content for the left column goes here>
-        <h3>Left Column</h3>
-        <p>This is the content for the first column. It will sit side-by-side with the right column.</p-->
-        <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=034694&w=a&t=m&d=hhczIYutoddEDzfoC-gYJsSv8lB0VJLc2jozKEGguj0&co=bedafa&cmn=ff5353&cmo=1fc136&ct=034694'></script>
-    </div>
-    <div class="column-right">
-        <!-- Content for the right column goes here -->
-        <h3>Right Column</h3>
-        <p>This is the content for the second column.</p>
-    </div>
-</div>
-
+  <div class="container-sm">
+  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=034694&w=a&t=m&d=hhczIYutoddEDzfoC-gYJsSv8lB0VJLc2jozKEGguj0&co=bedafa&cmn=ff5353&cmo=1fc136&ct=034694'></script>
+  </div>
 
 </body>
 </html>
