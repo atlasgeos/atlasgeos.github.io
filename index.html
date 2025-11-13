@@ -437,7 +437,7 @@
         const country = document.getElementById('contactCountry').value || '';
         const email = document.getElementById('contactEmail').value || '';
         const to = 'atlasgeosci@gmail.com';
-        const subject = encodeURIComponent('Purchase inquiry: ' + id + ' ' + requirement);
+        const subject = encodeURIComponent('Purchase inquiry: ' + id);
         const body = encodeURIComponent(`I am interested in product: ${id} \nCountry: ${country}\nContact email: ${email}\n\nPlease advise how to proceed with payment (donation).`);
         window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
       });
